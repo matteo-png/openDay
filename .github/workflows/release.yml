@@ -1,16 +1,31 @@
-name: Release
+name: CI/CD Semantic-release
+
 on:
   push:
     branches:
       - master
+
 jobs:
   release:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      
       - name: Install dependencies
         run: npm install
-      - name: Semantic Release
+
+      
+      - name: Semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
