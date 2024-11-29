@@ -22,5 +22,3 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           extraArgs: --autodiscover
-repositories:
-  - "matteo-png/openDay"
