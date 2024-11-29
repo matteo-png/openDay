@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/matteo-png/openDay/compare/v1.2.1...v2.0.0) (2024-11-29)
+
+
+### Features
+
+* mise à jour importante d'une fonctionnalité ([2b7066d](https://github.com/matteo-png/openDay/commit/2b7066da5e3becbd7b35c80f7909e25989975858))
+
+
+### BREAKING CHANGES
+
+* ce changement modifie l'API de manière incompatible
+
 ## [1.2.1](https://github.com/matteo-png/openDay/compare/v1.2.0...v1.2.1) (2024-11-29)
 
 
