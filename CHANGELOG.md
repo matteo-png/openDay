@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/matteo-png/openDay/compare/v1.2.0...v1.2.1) (2024-11-29)
+
+
+### Bug Fixes
+
+* fixe chiffre addition ([69ad427](https://github.com/matteo-png/openDay/commit/69ad427acda8e822a3897ee4e7e2803fef3322d7))
+
 # [1.2.0](https://github.com/matteo-png/openDay/compare/v1.1.0...v1.2.0) (2024-11-29)
 
 
