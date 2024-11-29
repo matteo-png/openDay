@@ -1,22 +1,23 @@
-extends:
-  - config:base
+name: Renovate Workflow
 
-# Planification des mises à jour
-schedule:
-  - "before 4am on monday"  # Exécuter les mises à jour chaque lundi avant 4h
+on:
+  push: # Exécute le workflow lorsque tu modifies quelque chose sur une branche
+    branches:
+      - master
+  pull_request: # Exécute le workflow pour les PR ouvertes ou synchronisées
+  workflow_dispatch: # Permet de déclencher manuellement le workflow
+  schedule:
+    - cron : '*/5 * * * *'
 
-# Automerge des mises à jour non critiques
-automerge: true
-automergeType: branch  # Fusionner directement dans une branche si les tests passent
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
 
-# Paramètres pour gérer les dépendances
-packageRules:
-  - matchDepTypes: ["devDependencies"]  # Règles spécifiques pour devDependencies
-    automerge: true                     # Automerge des devDependencies
-  - matchPackageNames:
-      - "express"                       # Exemple : règles spécifiques pour un package
-    groupName: "express updates"        # Groupement des mises à jour liées à "express"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-# Configuration supplémentaire
-dependencyDashboard: true  # Active un tableau de bord des dépendances
-prConcurrentLimit: 5       # Limite des PR ouvertes en simultané
+      - name: Run Renovate
+        uses: renovatebot/github-action@v38.2.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} # Utilise le token GitHub pour l'accès
