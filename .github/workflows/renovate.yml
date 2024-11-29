@@ -1,0 +1,22 @@
+extends:
+  - config:base
+
+# Planification des mises à jour
+schedule:
+  - "before 4am on monday"  # Exécuter les mises à jour chaque lundi avant 4h
+
+# Automerge des mises à jour non critiques
+automerge: true
+automergeType: branch  # Fusionner directement dans une branche si les tests passent
+
+# Paramètres pour gérer les dépendances
+packageRules:
+  - matchDepTypes: ["devDependencies"]  # Règles spécifiques pour devDependencies
+    automerge: true                     # Automerge des devDependencies
+  - matchPackageNames:
+      - "express"                       # Exemple : règles spécifiques pour un package
+    groupName: "express updates"        # Groupement des mises à jour liées à "express"
+
+# Configuration supplémentaire
+dependencyDashboard: true  # Active un tableau de bord des dépendances
+prConcurrentLimit: 5       # Limite des PR ouvertes en simultané
