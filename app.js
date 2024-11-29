@@ -4,7 +4,7 @@ const port = 3000;
 
 app.get('/addition', (req,res) => {
     const a = 1;
-    const b = 5;
+    const b = 8;
     const sum = a + b;
     res.send(`La somme de ${a} + ${b} est ${sum}`);
 });
