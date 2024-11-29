@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/matteo-png/openDay/compare/v1.0.0...v1.1.0) (2024-11-29)
+
+
+### Features
+
+* add soustraction ([71f5316](https://github.com/matteo-png/openDay/commit/71f5316862528cf3efc27ef1ba53409c3207d6c9))
+
 # 1.0.0 (2024-11-29)
 
 
