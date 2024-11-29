@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/matteo-png/openDay/compare/v1.1.0...v1.2.0) (2024-11-29)
+
+
+### Features
+
+* remove soustraction BREAKING CHANGE: cela enleve la fonction soustraction ([b936a33](https://github.com/matteo-png/openDay/commit/b936a3386ec112b34ea6d28eba532e52db4f9a9a))
+
 # [1.1.0](https://github.com/matteo-png/openDay/compare/v1.0.0...v1.1.0) (2024-11-29)
 
 
