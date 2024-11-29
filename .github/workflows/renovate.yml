@@ -1,11 +1,11 @@
 name: Renovate Workflow
 
 on:
-  push: # Exécute le workflow lorsque tu modifies quelque chose sur une branche
+  push: 
     branches:
       - master
-  pull_request: # Exécute le workflow pour les PR ouvertes ou synchronisées
-  workflow_dispatch: # Permet de déclencher manuellement le workflow
+  pull_request: 
+  workflow_dispatch: 
   schedule:
     - cron : '*/5 * * * *'
 
@@ -20,4 +20,7 @@ jobs:
       - name: Run Renovate
         uses: renovatebot/github-action@v41.0.3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} # Utilise le token GitHub pour l'accès
+          token: ${{ secrets.GITHUB_TOKEN }}
+          extraArgs: --autodiscover
+repositories:
+  - "matteo-png/openDay"
