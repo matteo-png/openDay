@@ -9,6 +9,12 @@ app.get('/addition', (req,res) => {
     res.send(`La somme de ${a} + ${b} est ${sum}`);
 });
 
+app.get('/soustraction', (req,res) => {
+    const a = 1;
+    const b = 5;
+    const sous = a - b;
+    res.send(`La soustraction de ${a} - ${b} est ${sous}`);
+});
 app.listen(port, () => {
     console.log(`App running on port ${port}`);
 });
