@@ -2,7 +2,7 @@
     "extends": ["config:base"],
     "config":
     {
-      "repositories":"https://github.com/matteo-png/openDay"
+      "repositories":["https://github.com/matteo-png/openDay"]
     }
   }
   
